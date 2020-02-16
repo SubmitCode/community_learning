@@ -1,4 +1,2 @@
-# nbdev template
-
-Use this template to more easily create your nbdev project.
-
+# CommunityLearning
+This project is an example of transfer learning.
