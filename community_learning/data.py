@@ -104,7 +104,7 @@ class SandanderData:
 
     def clean_ind_nuevo(self):
         """ind_nuevo indicates a new customer. We replace missing values with one"""
-        self.df.loc[df["ind_nuevo"].isnull(),"ind_nuevo"] = 1
+        self.df.loc[self.df["ind_nuevo"].isnull(),"ind_nuevo"] = 1
         return self
 
 
@@ -117,7 +117,7 @@ class SandanderData:
 
     def replace_missing_dates_with_median(self):
         """replace missing fecha_alta with median dates"""
-        dates=data.df.loc[:,"fecha_alta"].sort_values().reset_index()
+        dates=self.df.loc[:,"fecha_alta"].sort_values().reset_index()
         median_date = int(np.median(dates.index.values))
         self.df.loc[self.df.fecha_alta.isnull(),"fecha_alta"] = dates.loc[median_date,"fecha_alta"]
         return self
