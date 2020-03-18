@@ -6,6 +6,7 @@ __all__ = ['download_santander_data', 'unzip', 'SandanderData']
 import os
 import gdown
 import pandas as pd
+import numpy as np
 from nbdev import export
 from pathlib import Path
 from zipfile import ZipFile
