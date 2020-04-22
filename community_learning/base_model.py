@@ -8,7 +8,7 @@ import pandas as pd
 import numpy as np
 import xgboost as xgb
 from sklearn.model_selection import cross_validate
-from .features import target_cols
+from community_learning.features import target_cols
 from fastscript import *
 from tqdm.notebook import tqdm
 from itertools import compress
