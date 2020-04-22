@@ -2,11 +2,39 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"download_santander_data": "00_data_prep.ipynb",
-         "unzip": "00_data_prep.ipynb",
-         "SandanderData": "00_data_prep.ipynb"}
+index = {"download_santander_data": "01_data_preprocess.ipynb",
+         "unzip": "01_data_preprocess.ipynb",
+         "timeit": "01_data_preprocess.ipynb",
+         "canal_dict": "01_data_preprocess.ipynb",
+         "pais_dict": "01_data_preprocess.ipynb",
+         "emp_dict": "01_data_preprocess.ipynb",
+         "indfall_dict": "01_data_preprocess.ipynb",
+         "sexo_dict": "01_data_preprocess.ipynb",
+         "tiprel_dict": "01_data_preprocess.ipynb",
+         "indresi_dict": "01_data_preprocess.ipynb",
+         "indext_dict": "01_data_preprocess.ipynb",
+         "conyuemp_dict": "01_data_preprocess.ipynb",
+         "segmento_dict": "01_data_preprocess.ipynb",
+         "resize_data": "01_data_preprocess.ipynb",
+         "preprocess_csv": "01_data_preprocess.ipynb",
+         "load_data": "04_base_model.ipynb",
+         "clean_age": "02_data_Cleaning.ipynb",
+         "clean_renta": "02_data_Cleaning.ipynb",
+         "clean_all_data": "02_data_Cleaning.ipynb",
+         "target_cols": "03_target_vars.ipynb",
+         "calculate_targets": "03_target_vars.ipynb",
+         "train_test_split": "04_base_model.ipynb",
+         "x_y_split": "04_base_model.ipynb",
+         "runXGB": "04_base_model.ipynb",
+         "predict_all_products": "04_base_model.ipynb",
+         "apk": "04_base_model.ipynb",
+         "get_top7_preds_string": "04_base_model.ipynb",
+         "get_results": "04_base_model.ipynb"}
 
-modules = ["data.py"]
+modules = ["preprocess_data.py",
+           "data_preparation.py",
+           "features.py",
+           "base_model.py"]
 
 doc_url = "https://WFR.github.io/community_learning/"
 

@@ -5,6 +5,12 @@
 Hier ein Auszug von der Kaggle Website
 > In this competition, you are provided with 1.5 years of customers behavior data from Santander bank to predict what new products customers will purchase. The data starts at 2015-01-28 and has monthly records of products a customer has, such as "credit card", "savings account", etc. You will predict what additional products a customer will get in the last month, 2016-06-28, in addition to what they already have at 2016-05-28. These products are the columns named: ind_(xyz)_ult1, which are the columns #25 - #48 in the training data. You will predict what a customer will buy in addition to what they already had at 2016-05-28. 
 
+## Machine Learning Problem
+Wie weiter oben beschrieben ist das Ziel die zusätzlich gekauften Produkte im Monat vom 2016-06-28 zu bestimmen. Die Daten beinhalten Montasdaten von 2015-01-28 - 2016-05-28 (ca. 1.5 Jahre). Nun gäbe es mehrere Möglichkeiten das ML Problem zu formulieren: 
+- wir versuchen immer die gekauften Produkte des nächsten Monats zu bestimmen
+- wir versuchen immer die gekauften Produkte für den Juni jeweils anhand des Vormonats zu bestimmen (ignorieren alle anderen Monate). 
+- wir trainieren ein recommender system (collaborative filtering) mit allen Daten der Produkte und versuchen den letzten Monat vorherzusagen.
+
 ## Installation
 
 ## Vorgehen PoC
@@ -23,16 +29,3 @@ Um den Usecase möglichst realistisch zu gestalten, gehen wir wie folgt vor:
  - `model_bank2(data_bank2_test)` vs `ensemble(mdoel_bank2(data_bank1_test), model_bank2(data_bank2_test)`
 
 ## How to use
-
-Fill me in please! Don't forget code examples:
-
-```
-1+1
-```
-
-
-
-
-    2
-
-

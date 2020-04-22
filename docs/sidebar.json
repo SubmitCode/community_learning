@@ -1,6 +1,9 @@
 {
   "community_learning": {
     "Overview": "/",
-    "Data preparation": "/data_prep"
+    "Data preparation": "/data_preprocess",
+    "Data Cleaning": "/data_Cleaning",
+    "Feature Engineering und Target Variablen": "/target_vars",
+    "Base model": "/base_model"
   }
 }

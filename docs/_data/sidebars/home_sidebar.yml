@@ -11,7 +11,16 @@ entries:
       url: /
     - output: web,pdf
       title: Data preparation
-      url: /data_prep
+      url: /data_preprocess
+    - output: web,pdf
+      title: Data Cleaning
+      url: /data_Cleaning
+    - output: web,pdf
+      title: Feature Engineering und Target Variablen
+      url: /target_vars
+    - output: web,pdf
+      title: Base model
+      url: /base_model
     output: web
     title: community_learning
   output: web
