@@ -36,8 +36,8 @@ modules = ["preprocess_data.py",
            "features.py",
            "base_model.py"]
 
-doc_url = "https://WFR.github.io/community_learning/"
+doc_url = "https://wilhelm.github.io/community_learning/"
 
-git_url = "https://github.com/SubmitCode/CommunityLearning"
+git_url = "https://github.com/wilhelm/community_learning/tree/master/"
 
 def custom_doc_links(name): return None
