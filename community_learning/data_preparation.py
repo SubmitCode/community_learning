@@ -35,6 +35,7 @@ def clean_renta(df:pd.DataFrame):
 
     df.loc[df.renta < 0,"renta"] = new_incomes.loc[df.renta.isnull(),"renta"].reset_index()
     df.loc[df.renta < 0,"renta"] = df.loc[df.renta.notnull(),"renta"].median()
+    df['renta'] = df['renta'].astype(np.int32)
     df.sort_values(by="month_int",inplace=True)
     df.drop('index', inplace=True, axis=1)
     return df
