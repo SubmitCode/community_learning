@@ -2,7 +2,7 @@ topnav:
 - title: Topnav
   items:
     - title: GitHub
-      external_url: https://github.com/WFR/community_learning
+      external_url: https://github.com/submitCode/community_learning
 
 #Topnav dropdowns
 topnav_dropdowns:
