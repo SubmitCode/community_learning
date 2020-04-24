@@ -17,7 +17,7 @@ entries:
       url: /data_Cleaning
     - output: web,pdf
       title: Feature Engineering und Target Variablen
-      url: /target_vars
+      url: /features
     - output: web,pdf
       title: Base model
       url: /base_model

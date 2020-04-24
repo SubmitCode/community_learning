@@ -6,6 +6,7 @@ keywords: fastai
 sidebar: home_sidebar
 
 summary: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Prediction und Evaluation bereit. "
+description: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Prediction und Evaluation bereit. "
 ---
 <!--
 
@@ -18,11 +19,16 @@ summary: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Predict
 -->
 
 <div class="container" id="notebook-container">
-    {% raw %}
         
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -38,9 +44,10 @@ summary: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Predict
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+    {% endraw %}
 
-</div>
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
@@ -49,7 +56,7 @@ summary: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Predict
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 8.5 ms
+<pre>time: 293 ms
 </pre>
 </div>
 </div>
@@ -58,6 +65,31 @@ summary: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Predict
 </div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>time: 17.1 ms
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
@@ -67,7 +99,7 @@ summary: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Predict
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="load_data" class="doc_header"><code>load_data</code><a href="https://github.com/SubmitCode/CommunityLearningcommunity_learning/base_model.py#L17" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>load_data</code>(<strong><code>path</code></strong>=<em><code>'data/interim/03_train.csv'</code></em>)</p>
+<h4 id="load_data" class="doc_header"><code>load_data</code><a href="https://github.com/submitCode/community_learning/tree/master/community_learning/base_model.py#L17" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>load_data</code>(<strong><code>path_train</code></strong>=<em><code>'data/interim/03_train.csv'</code></em>, <strong><code>path_test</code></strong>=<em><code>'data/interim/03_test.csv'</code></em>)</p>
 </blockquote>
 <p>load data</p>
 
@@ -79,12 +111,16 @@ summary: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Predict
 </div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">()</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train_org</span><span class="p">,</span> <span class="n">test</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -97,7 +133,7 @@ summary: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Predict
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 26.7 s
+<pre>time: 2.29 s
 </pre>
 </div>
 </div>
@@ -106,12 +142,16 @@ summary: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Predict
 </div>
 
 </div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Train---Test-Split">Train - Test Split<a class="anchor-link" href="#Train---Test-Split">&#182;</a></h2>
+<h2 id="Train---Test-Split">Train - Test Split<a class="anchor-link" href="#Train---Test-Split"> </a></h2>
 </div>
 </div>
 </div>
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
@@ -120,7 +160,7 @@ summary: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Predict
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 9.23 ms
+<pre>time: 16.8 ms
 </pre>
 </div>
 </div>
@@ -129,6 +169,10 @@ summary: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Predict
 </div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
@@ -138,9 +182,9 @@ summary: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Predict
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="train_test_split" class="doc_header"><code>train_test_split</code><a href="https://github.com/SubmitCode/CommunityLearningcommunity_learning/base_model.py#L22" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>train_test_split</code>(<strong><code>df</code></strong>:<code>DataFrame</code>)</p>
+<h4 id="get_shift_cols" class="doc_header"><code>get_shift_cols</code><a href="https://github.com/submitCode/community_learning/tree/master/community_learning/base_model.py#L26" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_shift_cols</code>(<strong><code>columns</code></strong>:<code>list</code>)</p>
 </blockquote>
-<p>split the data in a training and testset</p>
+<p>get a list of columns</p>
 
 </div>
 
@@ -150,14 +194,17 @@ summary: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Predict
 </div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train_data</span><span class="p">,</span> <span class="n">test_data</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
-<span class="k">assert</span> <span class="p">(</span><span class="n">train_data</span><span class="o">.</span><span class="n">month_int</span> <span class="o">!=</span> <span class="mi">17</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
-<span class="k">assert</span> <span class="p">(</span><span class="n">test_data</span><span class="o">.</span><span class="n">month_int</span> <span class="o">==</span> <span class="mi">17</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">shift_cols</span> <span class="o">=</span> <span class="n">get_shift_cols</span><span class="p">(</span><span class="n">train</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">shift_cols</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
 </pre></div>
 
     </div>
@@ -170,7 +217,7 @@ summary: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Predict
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 13.4 ms
+<pre>time: 18.4 ms
 </pre>
 </div>
 </div>
@@ -179,6 +226,10 @@ summary: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Predict
 </div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
@@ -187,7 +238,7 @@ summary: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Predict
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 14.2 ms
+<pre>time: 10.5 ms
 </pre>
 </div>
 </div>
@@ -196,6 +247,31 @@ summary: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Predict
 </div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>time: 17.1 ms
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
@@ -205,7 +281,284 @@ summary: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Predict
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="x_y_split" class="doc_header"><code>x_y_split</code><a href="https://github.com/SubmitCode/CommunityLearningcommunity_learning/base_model.py#L30" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>x_y_split</code>(<strong><code>df</code></strong>:<code>DataFrame</code>, <strong><code>target_cols</code></strong>=<em><code>['ind_ahor_fin_ult1', 'ind_aval_fin_ult1', 'ind_cco_fin_ult1', 'ind_cder_fin_ult1', 'ind_cno_fin_ult1', 'ind_ctju_fin_ult1', 'ind_ctma_fin_ult1', 'ind_ctop_fin_ult1', 'ind_ctpp_fin_ult1', 'ind_deco_fin_ult1', 'ind_deme_fin_ult1', 'ind_dela_fin_ult1', 'ind_ecue_fin_ult1', 'ind_fond_fin_ult1', 'ind_hip_fin_ult1', 'ind_plan_fin_ult1', 'ind_pres_fin_ult1', 'ind_reca_fin_ult1', 'ind_tjcr_fin_ult1', 'ind_valo_fin_ult1', 'ind_viv_fin_ult1', 'ind_nomina_ult1', 'ind_nom_pens_ult1', 'ind_recibo_ult1']</code></em>)</p>
+<h4 id="get_product_dict" class="doc_header"><code>get_product_dict</code><a href="https://github.com/submitCode/community_learning/tree/master/community_learning/base_model.py#L58" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_product_dict</code>(<strong><code>df</code></strong>:<code>DataFrame</code>)</p>
+</blockquote>
+<p>returns product_name: integer pairs</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="get_product_reverse_dict" class="doc_header"><code>get_product_reverse_dict</code><a href="https://github.com/submitCode/community_learning/tree/master/community_learning/base_model.py#L63" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_product_reverse_dict</code>(<strong><code>df</code></strong>:<code>DataFrame</code>)</p>
+</blockquote>
+<p>returns product_name: integer pairs</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">product_dict</span> <span class="o">=</span> <span class="n">get_product_dict</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
+<span class="n">product_reverse_dict</span> <span class="o">=</span> <span class="n">get_product_reverse_dict</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">product_dict</span><span class="p">)</span> <span class="o">==</span> <span class="nb">dict</span>
+<span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">product_reverse_dict</span><span class="p">)</span> <span class="o">==</span> <span class="nb">dict</span>
+<span class="n">product_dict</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;ind_tjcr_fin_ult1&#39;: 0,
+ &#39;ind_cco_fin_ult1&#39;: 1,
+ &#39;ind_dela_fin_ult1&#39;: 2,
+ &#39;ind_cno_fin_ult1&#39;: 3,
+ &#39;ind_ctop_fin_ult1&#39;: 4,
+ &#39;ind_ecue_fin_ult1&#39;: 5,
+ &#39;ind_valo_fin_ult1&#39;: 6,
+ &#39;ind_nom_pens_ult1&#39;: 7,
+ &#39;ind_fond_fin_ult1&#39;: 8,
+ &#39;ind_deme_fin_ult1&#39;: 9,
+ &#39;ind_nomina_ult1&#39;: 10,
+ &#39;ind_reca_fin_ult1&#39;: 11,
+ &#39;ind_recibo_ult1&#39;: 12,
+ &#39;ind_ctpp_fin_ult1&#39;: 13,
+ &#39;ind_ctma_fin_ult1&#39;: 14,
+ &#39;ind_deco_fin_ult1&#39;: 15,
+ &#39;ind_hip_fin_ult1&#39;: 16,
+ &#39;ind_plan_fin_ult1&#39;: 17,
+ &#39;ind_cder_fin_ult1&#39;: 18,
+ &#39;ind_pres_fin_ult1&#39;: 19,
+ &#39;ind_viv_fin_ult1&#39;: 20,
+ &#39;ind_ctju_fin_ult1&#39;: 21}</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>time: 53.9 ms
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_product_reverse_dict</span><span class="p">(</span><span class="n">train_org</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{0: &#39;ind_tjcr_fin_ult1&#39;,
+ 1: &#39;ind_cco_fin_ult1&#39;,
+ 2: &#39;ind_dela_fin_ult1&#39;,
+ 3: &#39;ind_cno_fin_ult1&#39;,
+ 4: &#39;ind_ctop_fin_ult1&#39;,
+ 5: &#39;ind_ecue_fin_ult1&#39;,
+ 6: &#39;ind_valo_fin_ult1&#39;,
+ 7: &#39;ind_nom_pens_ult1&#39;,
+ 8: &#39;ind_fond_fin_ult1&#39;,
+ 9: &#39;ind_deme_fin_ult1&#39;,
+ 10: &#39;ind_nomina_ult1&#39;,
+ 11: &#39;ind_reca_fin_ult1&#39;,
+ 12: &#39;ind_recibo_ult1&#39;,
+ 13: &#39;ind_ctpp_fin_ult1&#39;,
+ 14: &#39;ind_ctma_fin_ult1&#39;,
+ 15: &#39;ind_deco_fin_ult1&#39;,
+ 16: &#39;ind_hip_fin_ult1&#39;,
+ 17: &#39;ind_plan_fin_ult1&#39;,
+ 18: &#39;ind_cder_fin_ult1&#39;,
+ 19: &#39;ind_pres_fin_ult1&#39;,
+ 20: &#39;ind_viv_fin_ult1&#39;,
+ 21: &#39;ind_ctju_fin_ult1&#39;}</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>time: 37.8 ms
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>time: 19 ms
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="encode_products" class="doc_header"><code>encode_products</code><a href="https://github.com/submitCode/community_learning/tree/master/community_learning/base_model.py#L70" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>encode_products</code>(<strong><code>df</code></strong>:<code>DataFrame</code>)</p>
+</blockquote>
+<p>encode products with integer</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span> <span class="o">=</span> <span class="n">encode_products</span><span class="p">(</span><span class="n">train_org</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">train</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">int8</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>time: 124 ms
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>time: 19.8 ms
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="x_y_split" class="doc_header"><code>x_y_split</code><a href="https://github.com/submitCode/community_learning/tree/master/community_learning/base_model.py#L77" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>x_y_split</code>(<strong><code>df</code></strong>:<code>DataFrame</code>)</p>
 </blockquote>
 <p>returns 2 dataframes for X and Y variables</p>
 
@@ -217,18 +570,17 @@ summary: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Predict
 </div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span> <span class="o">=</span> <span class="n">x_y_split</span><span class="p">(</span><span class="n">train_data</span><span class="p">,</span> <span class="n">target_cols</span><span class="p">)</span>
-<span class="n">X_test</span><span class="p">,</span> <span class="n">Y_test</span> <span class="o">=</span> <span class="n">x_y_split</span><span class="p">(</span><span class="n">test_data</span><span class="p">,</span> <span class="n">target_cols</span><span class="p">)</span>
-
-<span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">set</span><span class="p">(</span><span class="n">target_cols</span><span class="p">)</span>
-<span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">Y_train</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">==</span> <span class="nb">set</span><span class="p">(</span><span class="n">target_cols</span><span class="p">)</span>
-<span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">X_test</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">set</span><span class="p">(</span><span class="n">target_cols</span><span class="p">)</span>
-<span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">Y_test</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">==</span> <span class="nb">set</span><span class="p">(</span><span class="n">target_cols</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train_X</span><span class="p">,</span> <span class="n">train_y</span> <span class="o">=</span> <span class="n">x_y_split</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
+<span class="k">assert</span> <span class="s1">&#39;y&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">train_X</span><span class="o">.</span><span class="n">columns</span>
 </pre></div>
 
     </div>
@@ -241,7 +593,7 @@ summary: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Predict
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 14.6 ms
+<pre>time: 26.8 ms
 </pre>
 </div>
 </div>
@@ -250,12 +602,16 @@ summary: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Predict
 </div>
 
 </div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="XGB-functions">XGB functions<a class="anchor-link" href="#XGB-functions">&#182;</a></h2>
+<h2 id="XGB-train">XGB train<a class="anchor-link" href="#XGB-train"> </a></h2>
 </div>
 </div>
 </div>
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
@@ -264,7 +620,7 @@ summary: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Predict
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 12.4 ms
+<pre>time: 16 ms
 </pre>
 </div>
 </div>
@@ -273,6 +629,10 @@ summary: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Predict
 </div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
@@ -282,7 +642,7 @@ summary: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Predict
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="runXGB" class="doc_header"><code>runXGB</code><a href="https://github.com/SubmitCode/CommunityLearningcommunity_learning/base_model.py#L37" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>runXGB</code>(<strong><code>train_X</code></strong>, <strong><code>train_y</code></strong>, <strong><code>test_X</code></strong>, <strong><code>target_col</code></strong>, <strong><code>seed_val</code></strong>=<em><code>0</code></em>)</p>
+<h4 id="runXGB" class="doc_header"><code>runXGB</code><a href="https://github.com/submitCode/community_learning/tree/master/community_learning/base_model.py#L84" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>runXGB</code>(<strong><code>train_X</code></strong>, <strong><code>train_y</code></strong>, <strong><code>feature_cols</code></strong>, <strong><code>seed_val</code></strong>=<em><code>0</code></em>)</p>
 </blockquote>
 
 </div>
@@ -293,12 +653,17 @@ summary: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Predict
 </div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">result_xgb_df</span> <span class="o">=</span> <span class="n">runXGB</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">Y_train</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">X_test</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">target_cols</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">runXGB</span><span class="p">(</span><span class="n">train_X</span><span class="p">,</span> <span class="n">train_y</span><span class="p">,</span> <span class="n">feature_cols</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">model</span><span class="p">)</span> <span class="o">==</span> <span class="n">xgb</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">Booster</span>
 </pre></div>
 
     </div>
@@ -311,7 +676,7 @@ summary: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Predict
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 12.8 s
+<pre>time: 17min 46s
 </pre>
 </div>
 </div>
@@ -320,135 +685,19 @@ summary: "Dieses Modul stellt die Wesentlichen Funktionen für Training, Predict
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+    {% endraw %}
 
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">result_xgb_df</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 11.6 ms
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 10.6 ms
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="predict_all_products" class="doc_header"><code>predict_all_products</code><a href="https://github.com/SubmitCode/CommunityLearningcommunity_learning/base_model.py#L60" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>predict_all_products</code>(<strong><code>train_X</code></strong>, <strong><code>train_y</code></strong>, <strong><code>test_X</code></strong>, <strong><code>target_col</code></strong>)</p>
-</blockquote>
-<p>create a model for each product and return a DataFrame with all predictions</p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">predict_all_products</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">target_cols</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-time: 21.9 s
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">Y_train</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 9.46 ms
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Evaluate-Results">Evaluate Results<a class="anchor-link" href="#Evaluate-Results">&#182;</a></h2><p>Für die <a href="https://www.kaggle.com/c/santander-product-recommendation/overview/evaluation">Evaluierung</a> wird der Mean Average Precision @ 7 (MAP@7) hergenommen. Die unten stehenden Formel haben wir uns von <a href="https://github.com/jturkewitz/SideProjects/blob/4c437b02d5e017636c84cc22eb3ff71f8eea1308/Kaggle/Santander_Prod/santander_prod.py#L272">jturkewitz</a> ausgeliehen.</p>
+<h2 id="Evaluate">Evaluate<a class="anchor-link" href="#Evaluate"> </a></h2><p>Für die <a href="https://www.kaggle.com/c/santander-product-recommendation/overview/evaluation">Evaluierung</a> wird der Mean Average Precision @ 7 (MAP@7) hergenommen. Die unten stehenden Formel haben wir uns von <a href="https://github.com/jturkewitz/SideProjects/blob/4c437b02d5e017636c84cc22eb3ff71f8eea1308/Kaggle/Santander_Prod/santander_prod.py#L272">jturkewitz</a> ausgeliehen. <a href="http://sdsawtelle.github.io/blog/output/mean-average-precision-MAP-for-recommender-systems.html">Hier</a> noch eine gute Erklärung.</p>
 $$
 MAP@7 =  \dfrac{1} {\vert U \vert} \sum^{\vert U \vert}_{u=1} \dfrac {1} {min(m,7)} \sum^{min(n,7)}_{k=1} P(k)
 $$
 </div>
 </div>
 </div>
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
@@ -457,7 +706,7 @@ $$
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 10.1 ms
+<pre>time: 17.7 ms
 </pre>
 </div>
 </div>
@@ -466,6 +715,10 @@ $$
 </div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
@@ -475,18 +728,18 @@ $$
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="apk" class="doc_header"><code>apk</code><a href="https://github.com/SubmitCode/CommunityLearningcommunity_learning/base_model.py#L73" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>apk</code>(<strong><code>actual</code></strong>, <strong><code>predicted</code></strong>, <strong><code>k</code></strong>=<em><code>7</code></em>)</p>
+<h4 id="apk" class="doc_header"><code>apk</code><a href="https://github.com/submitCode/community_learning/tree/master/community_learning/base_model.py#L105" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>apk</code>(<strong><code>actual</code></strong>, <strong><code>predicted</code></strong>, <strong><code>k</code></strong>=<em><code>7</code></em>)</p>
 </blockquote>
 <p>Computes the average precision at k.
 This function computes the average prescision at k between two lists of
 items.</p>
-<h2 id="Parameters">Parameters<a class="anchor-link" href="#Parameters">&#182;</a></h2><p>actual : list
+<h2 id="Parameters">Parameters<a class="anchor-link" href="#Parameters"> </a></h2><p>actual : list
          A list of elements that are to be predicted (order doesn't matter)
 predicted : list
             A list of predicted elements (order does matter)
 k : int, optional
     The maximum number of predicted elements</p>
-<h2 id="Returns">Returns<a class="anchor-link" href="#Returns">&#182;</a></h2><p>score : double
+<h2 id="Returns">Returns<a class="anchor-link" href="#Returns"> </a></h2><p>score : double
         The average precision at k over the input lists</p>
 
 </div>
@@ -497,6 +750,265 @@ k : int, optional
 </div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">xgtest</span> <span class="o">=</span> <span class="n">xgb</span><span class="o">.</span><span class="n">DMatrix</span><span class="p">(</span><span class="n">test</span><span class="p">[</span><span class="n">feature_cols</span><span class="p">])</span>
+<span class="n">preds</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">xgtest</span><span class="p">)</span>
+<span class="n">preds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">preds</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">preds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fliplr</span><span class="p">(</span><span class="n">preds</span><span class="p">)[:,:</span><span class="mi">7</span><span class="p">]</span>
+<span class="n">preds</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">preds</span><span class="p">)</span>
+<span class="n">preds</span> <span class="o">=</span> <span class="n">preds</span><span class="o">.</span><span class="n">applymap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">product_reverse_dict</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+<span class="n">preds</span><span class="p">[</span><span class="s1">&#39;added_products&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">preds</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">values</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">preds</span> <span class="o">=</span> <span class="n">preds</span><span class="p">[</span><span class="s1">&#39;added_products&#39;</span><span class="p">]</span>
+<span class="n">preds</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0         [ind_recibo_ult1, ind_tjcr_fin_ult1, ind_dela_...
+1         [ind_cco_fin_ult1, ind_dela_fin_ult1, ind_reca...
+2         [ind_nom_pens_ult1, ind_nomina_ult1, ind_cno_f...
+3         [ind_cco_fin_ult1, ind_tjcr_fin_ult1, ind_reci...
+4         [ind_cno_fin_ult1, ind_valo_fin_ult1, ind_fond...
+                                ...                        
+702430    [ind_nom_pens_ult1, ind_nomina_ult1, ind_recib...
+702431    [ind_recibo_ult1, ind_nom_pens_ult1, ind_nomin...
+702432    [ind_recibo_ult1, ind_nom_pens_ult1, ind_nomin...
+702433    [ind_cco_fin_ult1, ind_recibo_ult1, ind_ecue_f...
+702434    [ind_recibo_ult1, ind_cno_fin_ult1, ind_nom_pe...
+Name: added_products, Length: 702435, dtype: object</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>time: 39.4 s
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_columns&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">test</span><span class="p">[</span><span class="s1">&#39;added_products&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">preds</span>
+<span class="n">test</span><span class="p">[</span><span class="s1">&#39;truth_list&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">test</span><span class="p">[</span><span class="n">target_cols</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">compress</span><span class="p">(</span><span class="n">target_cols</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">values</span><span class="p">)),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">test</span><span class="p">[[</span><span class="s1">&#39;added_products&#39;</span><span class="p">,</span> <span class="s1">&#39;truth_list&#39;</span><span class="p">]]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">test</span><span class="p">[</span><span class="s1">&#39;apk&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">apk</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;truth_list&#39;</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;added_products&#39;</span><span class="p">]),</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;mean average precision = </span><span class="si">{</span><span class="n">test</span><span class="p">[</span><span class="s1">&#39;apk&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>mean average precision = 0.023004870359693223
+time: 15.5 s
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">test</span><span class="p">[[</span><span class="s1">&#39;added_products&#39;</span><span class="p">,</span> <span class="s1">&#39;truth_list&#39;</span><span class="p">]]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>added_products</th>
+      <th>truth_list</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>[ind_recibo_ult1, ind_tjcr_fin_ult1, ind_dela_...</td>
+      <td>[ind_tjcr_fin_ult1]</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>[ind_cco_fin_ult1, ind_dela_fin_ult1, ind_reca...</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>[ind_nom_pens_ult1, ind_nomina_ult1, ind_cno_f...</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>[ind_cco_fin_ult1, ind_tjcr_fin_ult1, ind_reci...</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>[ind_cno_fin_ult1, ind_valo_fin_ult1, ind_fond...</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>702430</th>
+      <td>[ind_nom_pens_ult1, ind_nomina_ult1, ind_recib...</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>702431</th>
+      <td>[ind_recibo_ult1, ind_nom_pens_ult1, ind_nomin...</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>702432</th>
+      <td>[ind_recibo_ult1, ind_nom_pens_ult1, ind_nomin...</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>702433</th>
+      <td>[ind_cco_fin_ult1, ind_recibo_ult1, ind_ecue_f...</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>702434</th>
+      <td>[ind_recibo_ult1, ind_cno_fin_ult1, ind_nom_pe...</td>
+      <td>[]</td>
+    </tr>
+  </tbody>
+</table>
+<p>702435 rows × 2 columns</p>
+</div>
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>time: 37.1 ms
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>time: 10.9 ms
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
@@ -506,9 +1018,8 @@ k : int, optional
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="get_top7_preds_string" class="doc_header"><code>get_top7_preds_string</code><a href="https://github.com/SubmitCode/CommunityLearningcommunity_learning/base_model.py#L108" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_top7_preds_string</code>(<strong><code>row</code></strong>)</p>
+<h4 id="get_results" class="doc_header"><code>get_results</code><a href="https://github.com/submitCode/community_learning/tree/master/community_learning/base_model.py#L141" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_results</code>(<strong><code>test_data</code></strong>:<code>DataFrame</code>, <strong><code>model</code></strong>:<code>Booster</code>, <strong><code>target_cols</code></strong>:<code>list</code>=<em><code>['ind_ahor_fin_ult1', 'ind_aval_fin_ult1', 'ind_cco_fin_ult1', 'ind_cder_fin_ult1', 'ind_cno_fin_ult1', 'ind_ctju_fin_ult1', 'ind_ctma_fin_ult1', 'ind_ctop_fin_ult1', 'ind_ctpp_fin_ult1', 'ind_deco_fin_ult1', 'ind_deme_fin_ult1', 'ind_dela_fin_ult1', 'ind_ecue_fin_ult1', 'ind_fond_fin_ult1', 'ind_hip_fin_ult1', 'ind_plan_fin_ult1', 'ind_pres_fin_ult1', 'ind_reca_fin_ult1', 'ind_tjcr_fin_ult1', 'ind_valo_fin_ult1', 'ind_viv_fin_ult1', 'ind_nomina_ult1', 'ind_nom_pens_ult1', 'ind_recibo_ult1']</code></em>)</p>
 </blockquote>
-<p>return top 7 column names</p>
 
 </div>
 
@@ -518,12 +1029,19 @@ k : int, optional
 </div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">get_results</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">target_cols</span><span class="p">)</span>
+<span class="k">assert</span> <span class="s1">&#39;id&#39;</span> <span class="ow">in</span> <span class="n">results</span>
+<span class="k">assert</span> <span class="s1">&#39;truth_list&#39;</span> <span class="ow">in</span> <span class="n">results</span>
+<span class="k">assert</span> <span class="s1">&#39;apk&#39;</span> <span class="ow">in</span> <span class="n">results</span>
 </pre></div>
 
     </div>
@@ -535,10 +1053,122 @@ k : int, optional
 
 <div class="output_area">
 
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>mean average precision = 0.023004870359693223
+</pre>
+</div>
+</div>
+
+<div class="output_area">
 
 
-<div class="output_text output_subarea output_execute_result">
-<pre>56</pre>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>added_products</th>
+      <th>truth_list</th>
+      <th>apk</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>15889</td>
+      <td>[ind_recibo_ult1, ind_tjcr_fin_ult1, ind_dela_...</td>
+      <td>[ind_tjcr_fin_ult1]</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>15890</td>
+      <td>[ind_cco_fin_ult1, ind_dela_fin_ult1, ind_reca...</td>
+      <td>[]</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>15892</td>
+      <td>[ind_nom_pens_ult1, ind_nomina_ult1, ind_cno_f...</td>
+      <td>[]</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>15893</td>
+      <td>[ind_cco_fin_ult1, ind_tjcr_fin_ult1, ind_reci...</td>
+      <td>[]</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>15894</td>
+      <td>[ind_cno_fin_ult1, ind_valo_fin_ult1, ind_fond...</td>
+      <td>[]</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>702430</th>
+      <td>1454615</td>
+      <td>[ind_nom_pens_ult1, ind_nomina_ult1, ind_recib...</td>
+      <td>[]</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>702431</th>
+      <td>1454616</td>
+      <td>[ind_recibo_ult1, ind_nom_pens_ult1, ind_nomin...</td>
+      <td>[]</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>702432</th>
+      <td>1454617</td>
+      <td>[ind_recibo_ult1, ind_nom_pens_ult1, ind_nomin...</td>
+      <td>[]</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>702433</th>
+      <td>1454618</td>
+      <td>[ind_cco_fin_ult1, ind_recibo_ult1, ind_ecue_f...</td>
+      <td>[]</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>702434</th>
+      <td>1454620</td>
+      <td>[ind_recibo_ult1, ind_cno_fin_ult1, ind_nom_pe...</td>
+      <td>[]</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>702435 rows × 4 columns</p>
+</div>
 </div>
 
 </div>
@@ -546,7 +1176,7 @@ k : int, optional
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 17 ms
+<pre>time: 58.4 s
 </pre>
 </div>
 </div>
@@ -555,6 +1185,16 @@ k : int, optional
 </div>
 
 </div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Main-function">Main function<a class="anchor-link" href="#Main-function"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
@@ -563,7 +1203,7 @@ k : int, optional
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 10 ms
+<pre>time: 22.1 ms
 </pre>
 </div>
 </div>
@@ -572,6 +1212,10 @@ k : int, optional
 </div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
@@ -581,7 +1225,7 @@ k : int, optional
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="get_results" class="doc_header"><code>get_results</code><a href="https://github.com/SubmitCode/CommunityLearningcommunity_learning/base_model.py#L114" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_results</code>(<strong><code>results</code></strong>:<code>DataFrame</code>, <strong><code>Y_test</code></strong>:<code>DataFrame</code>, <strong><code>target_cols</code></strong>:<code>list</code>)</p>
+<h4 id="get_base_model_results" class="doc_header"><code>get_base_model_results</code><a href="https://github.com/submitCode/community_learning/tree/master/community_learning/base_model.py#L161" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_base_model_results</code>(<strong><code>source_train</code></strong>:"source csv file for train"=<em><code>'data/interim/03_train.csv'</code></em>, <strong><code>source_test</code></strong>:"source csv file for test"=<em><code>'data/interim/03_test.csv'</code></em>, <strong><code>dest</code></strong>:"destination csv file for the results"=<em><code>'data/results/base_model.csv'</code></em>, <strong><code>feature_cols</code></strong>:"list of features to use for training"=<em><code>['ind_empleado', 'sexo', 'age', 'renta', 'ind_nuevo', 'indrel', 'indrel_1mes', 'tiprel_1mes', 'indresi', 'indext', 'conyuemp', 'indfall', 'tipodom', 'ind_actividad_cliente', 'segmento', 'antiguedad', 'pais_residencia', 'canal_entrada', 'ind_cco_fin_ult1_s', 'ind_cder_fin_ult1_s', 'ind_cno_fin_ult1_s', 'ind_ctju_fin_ult1_s', 'ind_ctma_fin_ult1_s', 'ind_ctop_fin_ult1_s', 'ind_ctpp_fin_ult1_s', 'ind_deco_fin_ult1_s', 'ind_deme_fin_ult1_s', 'ind_dela_fin_ult1_s', 'ind_ecue_fin_ult1_s', 'ind_fond_fin_ult1_s', 'ind_hip_fin_ult1_s', 'ind_plan_fin_ult1_s', 'ind_pres_fin_ult1_s', 'ind_reca_fin_ult1_s', 'ind_tjcr_fin_ult1_s', 'ind_valo_fin_ult1_s', 'ind_viv_fin_ult1_s', 'ind_nomina_ult1_s', 'ind_nom_pens_ult1_s', 'ind_recibo_ult1_s']</code></em>)</p>
 </blockquote>
 
 </div>
@@ -592,265 +1236,40 @@ k : int, optional
 </div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_results</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">Y_test</span><span class="p">,</span> <span class="n">target_cols</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#slow</span>
+<span class="n">result1</span> <span class="o">=</span> <span class="n">get_base_model_results</span><span class="p">(</span><span class="n">source_train</span><span class="o">=</span><span class="s1">&#39;data/interim/03_train.csv&#39;</span><span class="p">,</span>
+                                <span class="n">source_test</span><span class="o">=</span><span class="s1">&#39;data/interim/03_test.csv&#39;</span><span class="p">,</span>
+                                <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;data/results/04_shift12.csv&#39;</span><span class="p">)</span>
+<span class="n">result12</span> <span class="o">=</span> <span class="n">get_base_model_results</span><span class="p">(</span><span class="n">source_train</span><span class="o">=</span><span class="s1">&#39;data/interim/03_train_shift12.csv&#39;</span><span class="p">,</span>
+                                <span class="n">source_test</span><span class="o">=</span><span class="s1">&#39;data/interim/03_test_shift12.csv&#39;</span><span class="p">,</span>
+                                <span class="n">dest</span><span class="o">=</span><span class="s1">&#39;data/results/04_shift12.csv&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0.0</pre>
 </div>
+    {% endraw %}
 
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 30 ms
-</pre>
-</div>
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Zusammenfassung">Zusammenfassung<a class="anchor-link" href="#Zusammenfassung"> </a></h2><p>Wie wir sehen ist unser initiales Resultat soweit ok. Leider können wir diese Zahl nicht direkt mit derjenigen von der Kaggle Competition vergleichen, da wir eine andere Periode vorhersagen. Zudem haben wir viele mögliche Features aussen vor gelassen. In einem echten Szenario würde wir vor allem noch mehr Datasets generieren und mit verschiedenen Lags und Features testen. Als Baseline für dieses Experiment ist das Model in Ordnung.</p>
 
 </div>
 </div>
-
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.max_rows&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;display.max_columns&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;truth_list&#39;</span><span class="p">])</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.max_rows&quot;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="s2">&quot;display.max_columns&quot;</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>3870944     []
-1129551     []
-4725151     []
-7062525     []
-6301145     []
-1888785     []
-9608704     []
-7613810     []
-9777585     []
-1618516     []
-963294      []
-4214997     []
-5470676     []
-6548175     []
-6902376     []
-7827475     []
-6474756     []
-7578104     []
-9867207     []
-2332207     []
-10075653    []
-9965412     []
-3445539     []
-6107015     []
-654088      []
-364135      []
-7880182     []
-8289804     []
-4113126     []
-6322435     []
-1564061     []
-474955      []
-6133955     []
-3655053     []
-6417222     []
-4828190     []
-8873971     []
-9864507     []
-4235603     []
-9329153     []
-167735      []
-7724527     []
-4571223     []
-948473      []
-979381      []
-5612213     []
-9068731     []
-2261127     []
-5063819     []
-9119919     []
-907675      []
-9843746     []
-2399617     []
-3503968     []
-1233984     []
-6746297     []
-Name: truth_list, dtype: object
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
-<span class="ansi-green-fg">~/miniconda3/envs/CommunityLearning/lib/python3.7/site-packages/pandas/core/indexes/base.py</span> in <span class="ansi-cyan-fg">get_loc</span><span class="ansi-blue-fg">(self, key, method, tolerance)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2645</span>             <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 2646</span><span class="ansi-red-fg">                 </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_engine<span class="ansi-blue-fg">.</span>get_loc<span class="ansi-blue-fg">(</span>key<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2647</span>             <span class="ansi-green-fg">except</span> KeyError<span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">pandas/_libs/index.pyx</span> in <span class="ansi-cyan-fg">pandas._libs.index.IndexEngine.get_loc</span><span class="ansi-blue-fg">()</span>
-
-<span class="ansi-green-fg">pandas/_libs/index.pyx</span> in <span class="ansi-cyan-fg">pandas._libs.index.IndexEngine.get_loc</span><span class="ansi-blue-fg">()</span>
-
-<span class="ansi-green-fg">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ansi-cyan-fg">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="ansi-blue-fg">()</span>
-
-<span class="ansi-green-fg">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ansi-cyan-fg">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="ansi-blue-fg">()</span>
-
-<span class="ansi-red-fg">KeyError</span>: &#39;truth_list&#39;
-
-During handling of the above exception, another exception occurred:
-
-<span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-19-a46b3ba93e0f&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> pd<span class="ansi-blue-fg">.</span>set_option<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;display.max_rows&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;display.max_columns&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span>results<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;truth_list&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>Y_train<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;truth_list&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> pd<span class="ansi-blue-fg">.</span>set_option<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;display.max_rows&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">50</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;display.max_columns&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">50</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/miniconda3/envs/CommunityLearning/lib/python3.7/site-packages/pandas/core/frame.py</span> in <span class="ansi-cyan-fg">__getitem__</span><span class="ansi-blue-fg">(self, key)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2798</span>             <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>columns<span class="ansi-blue-fg">.</span>nlevels <span class="ansi-blue-fg">&gt;</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   2799</span>                 <span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_getitem_multilevel<span class="ansi-blue-fg">(</span>key<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">-&gt; 2800</span><span class="ansi-red-fg">             </span>indexer <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>columns<span class="ansi-blue-fg">.</span>get_loc<span class="ansi-blue-fg">(</span>key<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2801</span>             <span class="ansi-green-fg">if</span> is_integer<span class="ansi-blue-fg">(</span>indexer<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   2802</span>                 indexer <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span>indexer<span class="ansi-blue-fg">]</span>
-
-<span class="ansi-green-fg">~/miniconda3/envs/CommunityLearning/lib/python3.7/site-packages/pandas/core/indexes/base.py</span> in <span class="ansi-cyan-fg">get_loc</span><span class="ansi-blue-fg">(self, key, method, tolerance)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2646</span>                 <span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_engine<span class="ansi-blue-fg">.</span>get_loc<span class="ansi-blue-fg">(</span>key<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2647</span>             <span class="ansi-green-fg">except</span> KeyError<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 2648</span><span class="ansi-red-fg">                 </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_engine<span class="ansi-blue-fg">.</span>get_loc<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>_maybe_cast_indexer<span class="ansi-blue-fg">(</span>key<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2649</span>         indexer <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>get_indexer<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>key<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> method<span class="ansi-blue-fg">=</span>method<span class="ansi-blue-fg">,</span> tolerance<span class="ansi-blue-fg">=</span>tolerance<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2650</span>         <span class="ansi-green-fg">if</span> indexer<span class="ansi-blue-fg">.</span>ndim <span class="ansi-blue-fg">&gt;</span> <span class="ansi-cyan-fg">1</span> <span class="ansi-green-fg">or</span> indexer<span class="ansi-blue-fg">.</span>size <span class="ansi-blue-fg">&gt;</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">pandas/_libs/index.pyx</span> in <span class="ansi-cyan-fg">pandas._libs.index.IndexEngine.get_loc</span><span class="ansi-blue-fg">()</span>
-
-<span class="ansi-green-fg">pandas/_libs/index.pyx</span> in <span class="ansi-cyan-fg">pandas._libs.index.IndexEngine.get_loc</span><span class="ansi-blue-fg">()</span>
-
-<span class="ansi-green-fg">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ansi-cyan-fg">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="ansi-blue-fg">()</span>
-
-<span class="ansi-green-fg">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ansi-cyan-fg">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="ansi-blue-fg">()</span>
-
-<span class="ansi-red-fg">KeyError</span>: &#39;truth_list&#39;</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 125 ms
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;added_products&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[&#39;ind_recibo_ult1&#39;,
- &#39;ind_aval_fin_ult1&#39;,
- &#39;ind_valo_fin_ult1&#39;,
- &#39;ind_ecue_fin_ult1&#39;,
- &#39;ind_tjcr_fin_ult1&#39;,
- &#39;ind_cco_fin_ult1&#39;,
- &#39;ind_plan_fin_ult1&#39;]</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 12.9 ms
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nd">@call_parse</span>
-<span class="k">def</span> <span class="nf">get_base_model_results</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;&quot;&quot;&quot;</span>
-    <span class="k">pass</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 25.1 ms
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -872,10 +1291,10 @@ During handling of the above exception, another exception occurred:
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Converted 01_data_preprocess.ipynb.
 Converted 02_data_Cleaning.ipynb.
-Converted 03_target_vars.ipynb.
+Converted 03_features.ipynb.
 Converted 04_base_model.ipynb.
 Converted index.ipynb.
-time: 50.9 ms
+time: 123 ms
 </pre>
 </div>
 </div>
@@ -885,6 +1304,24 @@ time: 50.9 ms
 
 </div>
     {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="ch">#!python community_learning/base_model.py</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 </div>
  
 

@@ -3,7 +3,7 @@
     "Overview": "/",
     "Data preparation": "/data_preprocess",
     "Data Cleaning": "/data_Cleaning",
-    "Feature Engineering und Target Variablen": "/target_vars",
+    "Feature Engineering und Target Variablen": "/features",
     "Base model": "/base_model"
   }
 }
