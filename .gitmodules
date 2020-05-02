@@ -1,0 +1,3 @@
+[submodule "docker.openmpi"]
+	path = docker.openmpi
+    url = git@github.com:SubmitCode/docker.openmpi 
