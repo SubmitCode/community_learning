@@ -17,7 +17,7 @@ index = {"download_santander_data": "01_data_preprocess.ipynb",
          "segmento_dict": "01_data_preprocess.ipynb",
          "resize_data": "01_data_preprocess.ipynb",
          "preprocess_csv": "01_data_preprocess.ipynb",
-         "load_data": "04_base_model.ipynb",
+         "load_data": "05_xgboost_simple_ensemble.ipynb",
          "clean_age": "02_data_Cleaning.ipynb",
          "clean_renta": "02_data_Cleaning.ipynb",
          "clean_all_data": "02_data_Cleaning.ipynb",
@@ -37,12 +37,23 @@ index = {"download_santander_data": "01_data_preprocess.ipynb",
          "runXGB": "04_base_model.ipynb",
          "apk": "04_base_model.ipynb",
          "get_results": "04_base_model.ipynb",
-         "get_base_model_results": "04_base_model.ipynb"}
+         "get_base_model_results": "04_base_model.ipynb",
+         "region": "05_xgboost_simple_ensemble.ipynb",
+         "load_provice_data": "05_xgboost_simple_ensemble.ipynb",
+         "add_region_to_nomprov": "05_xgboost_simple_ensemble.ipynb",
+         "add_region_train_test": "05_xgboost_simple_ensemble.ipynb",
+         "get_two_region_data": "05_xgboost_simple_ensemble.ipynb",
+         "get_two_region_base_models": "05_xgboost_simple_ensemble.ipynb",
+         "get_prediction": "05_xgboost_simple_ensemble.ipynb",
+         "evaluate_predictions": "05_xgboost_simple_ensemble.ipynb",
+         "fill_results": "05_xgboost_simple_ensemble.ipynb"}
 
 modules = ["preprocess_data.py",
            "data_preparation.py",
            "features.py",
-           "base_model.py"]
+           "base_model.py",
+           "example.py",
+           "None.py"]
 
 doc_url = "https://submitCode.github.io/community_learning/"
 
