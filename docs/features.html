@@ -54,7 +54,7 @@ description: "In diesem Modul werden zusätzliche Features berechnet und die Zie
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 185 ms
+<pre>time: 111 ms
 </pre>
 </div>
 </div>
@@ -75,7 +75,7 @@ description: "In diesem Modul werden zusätzliche Features berechnet und die Zie
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 338 µs
+<pre>time: 329 µs
 </pre>
 </div>
 </div>
@@ -131,7 +131,7 @@ description: "In diesem Modul werden zusätzliche Features berechnet und die Zie
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 18.3 s
+<pre>time: 30.9 s
 </pre>
 </div>
 </div>
@@ -456,7 +456,7 @@ description: "In diesem Modul werden zusätzliche Features berechnet und die Zie
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 13.4 ms
+<pre>time: 14 ms
 </pre>
 </div>
 </div>
@@ -477,7 +477,7 @@ description: "In diesem Modul werden zusätzliche Features berechnet und die Zie
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 16.4 ms
+<pre>time: 996 µs
 </pre>
 </div>
 </div>
@@ -540,7 +540,7 @@ dtype: int64</pre>
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 580 ms
+<pre>time: 481 ms
 </pre>
 </div>
 </div>
@@ -567,7 +567,7 @@ dtype: int64</pre>
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 1.23 ms
+<pre>time: 1.24 ms
 </pre>
 </div>
 </div>
@@ -616,6 +616,7 @@ dtype: int64</pre>
 <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df_s_12</span><span class="p">))</span>
 <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">df1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_s_12</span><span class="p">)</span>
 <span class="k">assert</span> <span class="nb">min</span><span class="p">(</span><span class="n">df_s_12</span><span class="o">.</span><span class="n">month_int</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span> <span class="o">==</span> <span class="mi">13</span> <span class="c1">#first month 1 + 12 shift</span>
+<span class="k">assert</span> <span class="nb">min</span><span class="p">(</span><span class="n">calculate_targets</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">shift_periods</span> <span class="o">=</span> <span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">month_int</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span> <span class="o">==</span> <span class="mi">7</span>
 <span class="k">assert</span> <span class="s1">&#39;ind_ctma_fin_ult1_s&#39;</span> <span class="ow">in</span> <span class="n">df1</span><span class="o">.</span><span class="n">columns</span> <span class="c1">#shifted columns</span>
 </pre></div>
 
@@ -631,7 +632,7 @@ dtype: int64</pre>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>10143523
 2569018
-time: 39.5 s
+time: 1min 13s
 </pre>
 </div>
 </div>
@@ -652,7 +653,7 @@ time: 39.5 s
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 423 µs
+<pre>time: 427 µs
 </pre>
 </div>
 </div>
@@ -709,7 +710,7 @@ time: 39.5 s
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 500 ms
+<pre>time: 511 ms
 </pre>
 </div>
 </div>
@@ -730,7 +731,7 @@ time: 39.5 s
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 3.01 ms
+<pre>time: 1.24 ms
 </pre>
 </div>
 </div>
@@ -788,7 +789,7 @@ time: 39.5 s
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 385 ms
+<pre>time: 384 ms
 </pre>
 </div>
 </div>
@@ -815,7 +816,7 @@ time: 39.5 s
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 566 µs
+<pre>time: 580 µs
 </pre>
 </div>
 </div>
@@ -873,7 +874,7 @@ time: 39.5 s
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 1.29 s
+<pre>time: 1.36 s
 </pre>
 </div>
 </div>
@@ -894,7 +895,7 @@ time: 39.5 s
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 593 µs
+<pre>time: 607 µs
 </pre>
 </div>
 </div>
@@ -953,7 +954,7 @@ time: 39.5 s
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 8.09 s
+<pre>time: 8.19 s
 </pre>
 </div>
 </div>
@@ -1172,7 +1173,7 @@ time: 39.5 s
       <td>...</td>
     </tr>
     <tr>
-      <th>401240</th>
+      <th>369626</th>
       <td>0</td>
       <td>0</td>
       <td>45</td>
@@ -1196,7 +1197,7 @@ time: 39.5 s
       <td>ind_cno_fin_ult1</td>
     </tr>
     <tr>
-      <th>401241</th>
+      <th>369627</th>
       <td>0</td>
       <td>0</td>
       <td>45</td>
@@ -1220,7 +1221,7 @@ time: 39.5 s
       <td>ind_nomina_ult1</td>
     </tr>
     <tr>
-      <th>401242</th>
+      <th>369628</th>
       <td>0</td>
       <td>0</td>
       <td>45</td>
@@ -1244,7 +1245,7 @@ time: 39.5 s
       <td>ind_nom_pens_ult1</td>
     </tr>
     <tr>
-      <th>401243</th>
+      <th>369629</th>
       <td>0</td>
       <td>0</td>
       <td>45</td>
@@ -1268,7 +1269,7 @@ time: 39.5 s
       <td>ind_nomina_ult1</td>
     </tr>
     <tr>
-      <th>401244</th>
+      <th>369630</th>
       <td>0</td>
       <td>0</td>
       <td>45</td>
@@ -1293,7 +1294,7 @@ time: 39.5 s
     </tr>
   </tbody>
 </table>
-<p>401245 rows × 43 columns</p>
+<p>369631 rows × 43 columns</p>
 </div>
 </div>
 
@@ -1302,7 +1303,7 @@ time: 39.5 s
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 67.4 ms
+<pre>time: 40.5 ms
 </pre>
 </div>
 </div>
@@ -1323,7 +1324,7 @@ time: 39.5 s
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 62 ms
+<pre>time: 62.8 ms
 </pre>
 </div>
 </div>
@@ -1368,11 +1369,11 @@ time: 39.5 s
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#slow</span>
 <span class="n">train</span><span class="p">,</span> <span class="n">test</span> <span class="o">=</span> <span class="n">calculate_main</span><span class="p">()</span>
-<span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">calculate_main</span><span class="p">(</span>
+<span class="n">train12</span><span class="p">,</span> <span class="n">test12</span> <span class="o">=</span> <span class="n">calculate_main</span><span class="p">(</span>
     <span class="n">dest_train</span><span class="o">=</span><span class="s1">&#39;data/interim/03_train_shift12.csv&#39;</span><span class="p">,</span> 
     <span class="n">dest_test</span><span class="o">=</span><span class="s1">&#39;data/interim/03_test_shift12.csv&#39;</span><span class="p">,</span> 
     <span class="n">shift_periods</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-<span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">calculate_main</span><span class="p">(</span>
+<span class="n">train6</span><span class="p">,</span> <span class="n">test6</span> <span class="o">=</span> <span class="n">calculate_main</span><span class="p">(</span>
     <span class="n">dest_train</span><span class="o">=</span><span class="s1">&#39;data/interim/03_train_shift6.csv&#39;</span><span class="p">,</span> 
     <span class="n">dest_test</span><span class="o">=</span><span class="s1">&#39;data/interim/03_test_shift6.csv&#39;</span><span class="p">,</span> 
     <span class="n">shift_periods</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
@@ -1387,162 +1388,8 @@ time: 39.5 s
 
 <div class="output_area">
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(        ind_empleado  sexo  age   renta  ind_nuevo  indrel  indrel_1mes  \
- 0                  3     0   56  326124          0       1            1   
- 1                  3     1   61  430477          0       1            1   
- 2                  3     1   61  430477          0       1            1   
- 3                  3     1   61  430477          0       1            1   
- 4                  3     1   61  430477          0       1            1   
- ...              ...   ...  ...     ...        ...     ...          ...   
- 642455             0     0   37   51702          0       1            1   
- 642456             0     0   37   51702          0       1            1   
- 642457             0     0   21  175851          0       1            1   
- 642458             0     0   45   75445          0       1            1   
- 642459             0     0   46   75445          0       1            1   
- 
-         tiprel_1mes  indresi  indext  ...  ind_reca_fin_ult1_s  \
- 0                 0        1       0  ...                    0   
- 1                 0        1       0  ...                    1   
- 2                 0        1       0  ...                    1   
- 3                 0        1       0  ...                    1   
- 4                 0        1       0  ...                    1   
- ...             ...      ...     ...  ...                  ...   
- 642455            0        1       0  ...                    0   
- 642456            0        1       0  ...                    0   
- 642457            0        1       0  ...                    0   
- 642458            0        1       0  ...                    0   
- 642459            0        1       0  ...                    0   
- 
-         ind_tjcr_fin_ult1_s  ind_valo_fin_ult1_s  ind_viv_fin_ult1_s  \
- 0                         0                    1                   0   
- 1                         1                    1                   0   
- 2                         1                    1                   0   
- 3                         1                    1                   0   
- 4                         1                    1                   0   
- ...                     ...                  ...                 ...   
- 642455                    0                    0                   0   
- 642456                    0                    0                   0   
- 642457                    0                    0                   0   
- 642458                    0                    0                   0   
- 642459                    0                    0                   0   
- 
-         ind_nomina_ult1_s  ind_nom_pens_ult1_s  ind_recibo_ult1_s  month_int  \
- 0                       0                    0                  0         15   
- 1                       0                    0                  1          7   
- 2                       0                    0                  1          8   
- 3                       0                    0                  1          9   
- 4                       0                    0                  1         10   
- ...                   ...                  ...                ...        ...   
- 642455                  0                    0                  0         16   
- 642456                  0                    0                  0         16   
- 642457                  0                    0                  0         15   
- 642458                  0                    0                  0         15   
- 642459                  0                    0                  0         16   
- 
-              id                  y  
- 0         15889  ind_tjcr_fin_ult1  
- 1         15892   ind_cco_fin_ult1  
- 2         15892   ind_cco_fin_ult1  
- 3         15892   ind_cco_fin_ult1  
- 4         15892   ind_cco_fin_ult1  
- ...         ...                ...  
- 642455  1454607   ind_cno_fin_ult1  
- 642456  1454607  ind_nom_pens_ult1  
- 642457  1454608   ind_cco_fin_ult1  
- 642458  1454615   ind_cno_fin_ult1  
- 642459  1454615   ind_cno_fin_ult1  
- 
- [642460 rows x 43 columns],
-                id  ind_empleado  pais_residencia  sexo  age  ind_nuevo  \
- 10649083    15889             3                0     0   56          0   
- 10649181    15890             1                0     0   63          0   
- 10649180    15892             3                0     1   62          0   
- 10649179    15893             0                0     0   63          0   
- 10649167    15894             1                0     0   60          0   
- ...           ...           ...              ...   ...  ...        ...   
- 10824630  1454615             0                0     0   46          0   
- 10540503  1454616             0                0     1   21          0   
- 10607387  1454617             0                0     1   21          0   
- 10205190  1454618             0                0     0   20          0   
- 10460198  1454620             0                0     0   20          0   
- 
-           antiguedad  indrel  indrel_1mes  tiprel_1mes  ...  \
- 10649083         255       1            1            0  ...   
- 10649181         256       1            1            0  ...   
- 10649180         256       1            1            0  ...   
- 10649179         256       1            1            0  ...   
- 10649167         256       1            1            0  ...   
- ...              ...     ...          ...          ...  ...   
- 10824630           8       1            1            0  ...   
- 10540503           8       1            1            0  ...   
- 10607387           8       1            1            0  ...   
- 10205190           8       1            1            1  ...   
- 10460198           8       1            1            0  ...   
- 
-           ind_hip_fin_ult1_s  ind_plan_fin_ult1_s  ind_pres_fin_ult1_s  \
- 10649083                   0                    0                    0   
- 10649181                   0                    1                    0   
- 10649180                   0                    0                    0   
- 10649179                   0                    0                    0   
- 10649167                   0                    0                    0   
- ...                      ...                  ...                  ...   
- 10824630                   0                    0                    0   
- 10540503                   0                    0                    0   
- 10607387                   0                    0                    0   
- 10205190                   0                    0                    0   
- 10460198                   0                    0                    0   
- 
-           ind_reca_fin_ult1_s  ind_tjcr_fin_ult1_s  ind_valo_fin_ult1_s  \
- 10649083                    0                    0                    1   
- 10649181                    0                    1                    0   
- 10649180                    1                    1                    1   
- 10649179                    0                    0                    1   
- 10649167                    1                    1                    1   
- ...                       ...                  ...                  ...   
- 10824630                    0                    0                    0   
- 10540503                    0                    0                    0   
- 10607387                    0                    0                    0   
- 10205190                    0                    0                    0   
- 10460198                    0                    0                    0   
- 
-           ind_viv_fin_ult1_s  ind_nomina_ult1_s  ind_nom_pens_ult1_s  \
- 10649083                   0                  0                    0   
- 10649181                   0                  1                    1   
- 10649180                   0                  0                    0   
- 10649179                   0                  0                    0   
- 10649167                   0                  1                    1   
- ...                      ...                ...                  ...   
- 10824630                   0                  0                    0   
- 10540503                   0                  0                    0   
- 10607387                   0                  0                    0   
- 10205190                   0                  0                    0   
- 10460198                   0                  0                    0   
- 
-           ind_recibo_ult1_s  
- 10649083                  0  
- 10649181                  1  
- 10649180                  1  
- 10649179                  0  
- 10649167                  1  
- ...                     ...  
- 10824630                  0  
- 10540503                  0  
- 10607387                  0  
- 10205190                  0  
- 10460198                  0  
- 
- [702435 rows x 79 columns])</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 3min 12s
+<pre>time: 3min 54s
 </pre>
 </div>
 </div>
@@ -2157,7 +2004,7 @@ time: 39.5 s
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 34.2 ms
+<pre>time: 52.7 ms
 </pre>
 </div>
 </div>
@@ -3203,7 +3050,7 @@ time: 39.5 s
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>time: 31.6 ms
+<pre>time: 46.4 ms
 </pre>
 </div>
 </div>
@@ -3214,6 +3061,54 @@ time: 39.5 s
 </div>
     {% endraw %}
 
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">train</span><span class="o">.</span><span class="n">month_int</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">train6</span><span class="o">.</span><span class="n">month_int</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">train12</span><span class="o">.</span><span class="n">month_int</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">train</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">train6</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">train12</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2
+7
+13
+421954
+642460
+341934
+time: 5.5 ms
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Export">Export<a class="anchor-link" href="#Export"> </a></h2>
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -3239,8 +3134,54 @@ time: 39.5 s
 Converted 02_data_Cleaning.ipynb.
 Converted 03_features.ipynb.
 Converted 04_base_model.ipynb.
+Converted 05_community_learning.ipynb.
+Converted 06_LightGBM_Federated_Learning.ipynb.
+Converted 06_XGBoost_Federated_Learning.ipynb.
+Converted 06_lightGBM.ipynb.
+Converted Untitled.ipynb.
 Converted index.ipynb.
-time: 105 ms
+time: 197 ms
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>421954</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>time: 1.25 ms
 </pre>
 </div>
 </div>

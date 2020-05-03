@@ -4,6 +4,8 @@
     "Data preparation": "/data_preprocess",
     "Data Cleaning": "/data_Cleaning",
     "Feature Engineering und Target Variablen": "/features",
-    "Base model": "/base_model"
+    "Base model": "/base_model",
+    "Community Learning": "/xgboost_simple_ensemble",
+    "Title": "/Distributed_ML"
   }
 }

@@ -21,6 +21,12 @@ entries:
     - output: web,pdf
       title: Base model
       url: /base_model
+    - output: web,pdf
+      title: Community Learning
+      url: /xgboost_simple_ensemble
+    - output: web,pdf
+      title: Title
+      url: /Distributed_ML
     output: web
     title: community_learning
   output: web
