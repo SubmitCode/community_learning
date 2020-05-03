@@ -84,7 +84,9 @@ Um die Daten möglichst konsitent zu teilen, werden wir für jede Kundenid den u
 - **Berechnung von einem Ensemble:**
 Nachdem wir die Daten in einen Region-Süd und in eine Region-Nord aufgeteilt haben. Trainieren wir jeweils ein Model mit den jeweiligen Daten. 
 
+## 06_Distributed_ML.ipynb
 
+Hierfür baute ich einen Cluster aus drei Cotnainern welche mittels OpenMPI (Message Passing Library) miteinander kommunzieren. Hierfür musste LightGBM (MPI Version kompiliert werden). Der Cluster besteht aus 1 Head Node und 2 Compute Nodes. Der eine Node bekam die Daten von Region Süd und der andere von der Region Nord.
 
 # Summary
 
