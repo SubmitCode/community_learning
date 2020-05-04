@@ -1,5 +1,5 @@
 # Community Learning
-> In diesem PoC zeigen wir auf, dass durch Federated Learning, deutlich bessere Ergebnisse erzielt werden können. 
+> In diesem PoC wird anhand von Beispiel Daten der Federated Learning Ansatz aufgezeigt. Die Beispieldaten stammen von der Kaggle [Santander Product Recommendation](https://www.kaggle.com/c/santander-product-recommendation/data) Competition.
 
 
 Hier ein Auszug von der Kaggle Website
@@ -23,7 +23,7 @@ Grundsätzlich gibt es 3 Arten von Federated Learning.
 **Transfer Learning**
 ![Transfer Learning](data/images/transfer_learning.png "Transfer Learning")
 
-Ein Produktion Ready Federated Learning System müsste wie folgt aussehen. Doch das vorrangige Ziel ist es zu beweisen, dass wir bessere Ergebnisse erzielen, wenn Modelle gemeinsam trainiert werden, ohne dass ein Daten Austuasch kommt. Deshalb wird in diesem PoC Federated Learning wie Distributed Maschine Learning Problem behandelt mit unterschiedlichen Data Owner. 
+Ein Produktion Ready Federated Learning System müsste wie folgt aussehen. Doch das vorrangige Ziel ist es zu beweisen, dass wir bessere Ergebnisse erzielen, wenn Modelle gemeinsam trainiert werden, ohne dass ein Daten Austausch kommt. Deshalb wird in diesem PoC Federated Learning wie Distributed Maschine Learning Problem behandelt mit unterschiedlichen Data Owner. 
 ![federated learning](data/images/horizontal_federated_learning.png "federated learning")
 
 
@@ -45,13 +45,12 @@ Wie weiter oben beschrieben ist das Ziel die zusätzlich gekauften Produkte im M
 - wir versuchen immer die gekauften Produkte für den Juni jeweils anhand des Vormonats zu bestimmen (ignorieren alle anderen Monate). 
 - wir trainieren ein recommender system (collaborative filtering) mit allen Daten der Produkte und versuchen den letzten Monat vorherzusagen.
 
-## Beschreibung (PoC)
-Um den Usecase möglichst realistisch zu gestalten, gehen wir wie folgt vor:
+# Notebooks
 
-### Notebooks 01_data_preprocess.ipynb und 02_data_Cleaning.ipynb
+## Notebooks 01_data_preprocess.ipynb und 02_data_Cleaning.ipynb
 In den Notebooks **01_data_preprocess.ipynb** und **02_data_Cleaning.ipynb** werden die Daten aufbereitet. Da dieses Datenset recht gross ist, werden zuerst alle Daten in integer umgewandelt. Das Ziel ist es Floats- und Character Daten möglichst zu vermeiden, da diese den DataFrame unnötig aufblähen. Im Notebook 02 wird noch bei einzelnen Features die Nans ein wenig "smarter" bereinigt. 
 
-### Notebook 03_features.ipynb 
+## Notebook 03_features.ipynb 
 Das Notebook **03_features.ipynb** macht mehrere Dinge. 
  - **Zielvariablen:** Das ML Problem lautet vorherzusagen, welche Produkte von einem Kunden im nächsten Monat zusätzlich erworben werden. Um dies festzustellen muss der aktuelle Monat mit dem Vormonat verglichen werden um zu sehen ob ein neues Produkt erworben wurd.
  - **Produkt Features:** Neben den vorhandenen Features, macht es natürlich Sinn auch die Produkte selbst als Features zu definieren. Z.B. Kreditkarte Vormonat: hatte der Kunde im Vormonat eine Kreditkarte ist das eine wichtige Info. 
@@ -165,4 +164,4 @@ df
 
  - 
 
-## How to use
+# How to use

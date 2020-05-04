@@ -5,8 +5,8 @@ title: Community Learning
 keywords: fastai
 sidebar: home_sidebar
 
-summary: "In diesem PoC zeigen wir auf, dass durch Federated Learning, deutlich bessere Ergebnisse erzielt werden können. "
-description: "In diesem PoC zeigen wir auf, dass durch Federated Learning, deutlich bessere Ergebnisse erzielt werden können. "
+summary: "In diesem PoC wird anhand von Beispiel Daten der Federated Learning Ansatz aufgezeigt. Die Beispieldaten stammen von der Kaggle [Santander Product Recommendation](https://www.kaggle.com/c/santander-product-recommendation/data) Competition."
+description: "In diesem PoC wird anhand von Beispiel Daten der Federated Learning Ansatz aufgezeigt. Die Beispieldaten stammen von der Kaggle [Santander Product Recommendation](https://www.kaggle.com/c/santander-product-recommendation/data) Competition."
 ---
 <!--
 
@@ -62,7 +62,7 @@ we say the federated learning algorithm has $\delta$-accuracy loss. <a href="htt
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Ein Produktion Ready Federated Learning System müsste wie folgt aussehen. Doch das vorrangige Ziel ist es zu beweisen, dass wir bessere Ergebnisse erzielen, wenn Modelle gemeinsam trainiert werden, ohne dass ein Daten Austuasch kommt. Deshalb wird in diesem PoC Federated Learning wie Distributed Maschine Learning Problem behandelt mit unterschiedlichen Data Owner. 
+<p>Ein Produktion Ready Federated Learning System müsste wie folgt aussehen. Doch das vorrangige Ziel ist es zu beweisen, dass wir bessere Ergebnisse erzielen, wenn Modelle gemeinsam trainiert werden, ohne dass ein Daten Austausch kommt. Deshalb wird in diesem PoC Federated Learning wie Distributed Maschine Learning Problem behandelt mit unterschiedlichen Data Owner. 
 <img src="/community_learning/data/images/horizontal_federated_learning.png" alt="federated learning" title="federated learning"></p>
 
 </div>
@@ -105,15 +105,20 @@ we say the federated learning algorithm has $\delta$-accuracy loss. <a href="htt
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Beschreibung-(PoC)">Beschreibung (PoC)<a class="anchor-link" href="#Beschreibung-(PoC)"> </a></h2><p>Um den Usecase möglichst realistisch zu gestalten, gehen wir wie folgt vor:</p>
-<h3 id="Notebooks-01_data_preprocess.ipynb-und-02_data_Cleaning.ipynb">Notebooks 01_data_preprocess.ipynb und 02_data_Cleaning.ipynb<a class="anchor-link" href="#Notebooks-01_data_preprocess.ipynb-und-02_data_Cleaning.ipynb"> </a></h3><p>In den Notebooks <strong>01_data_preprocess.ipynb</strong> und <strong>02_data_Cleaning.ipynb</strong> werden die Daten aufbereitet. Da dieses Datenset recht gross ist, werden zuerst alle Daten in integer umgewandelt. Das Ziel ist es Floats- und Character Daten möglichst zu vermeiden, da diese den DataFrame unnötig aufblähen. Im Notebook 02 wird noch bei einzelnen Features die Nans ein wenig "smarter" bereinigt.</p>
+<h1 id="Notebooks">Notebooks<a class="anchor-link" href="#Notebooks"> </a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Notebooks-01_data_preprocess.ipynb-und-02_data_Cleaning.ipynb">Notebooks 01_data_preprocess.ipynb und 02_data_Cleaning.ipynb<a class="anchor-link" href="#Notebooks-01_data_preprocess.ipynb-und-02_data_Cleaning.ipynb"> </a></h2><p>In den Notebooks <strong>01_data_preprocess.ipynb</strong> und <strong>02_data_Cleaning.ipynb</strong> werden die Daten aufbereitet. Da dieses Datenset recht gross ist, werden zuerst alle Daten in integer umgewandelt. Das Ziel ist es Floats- und Character Daten möglichst zu vermeiden, da diese den DataFrame unnötig aufblähen. Im Notebook 02 wird noch bei einzelnen Features die Nans ein wenig "smarter" bereinigt.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Notebook-03_features.ipynb">Notebook 03_features.ipynb<a class="anchor-link" href="#Notebook-03_features.ipynb"> </a></h3><p>Das Notebook <strong>03_features.ipynb</strong> macht mehrere Dinge.</p>
+<h2 id="Notebook-03_features.ipynb">Notebook 03_features.ipynb<a class="anchor-link" href="#Notebook-03_features.ipynb"> </a></h2><p>Das Notebook <strong>03_features.ipynb</strong> macht mehrere Dinge.</p>
 <ul>
 <li><strong>Zielvariablen:</strong> Das ML Problem lautet vorherzusagen, welche Produkte von einem Kunden im nächsten Monat zusätzlich erworben werden. Um dies festzustellen muss der aktuelle Monat mit dem Vormonat verglichen werden um zu sehen ob ein neues Produkt erworben wurd.</li>
 <li><strong>Produkt Features:</strong> Neben den vorhandenen Features, macht es natürlich Sinn auch die Produkte selbst als Features zu definieren. Z.B. Kreditkarte Vormonat: hatte der Kunde im Vormonat eine Kreditkarte ist das eine wichtige Info. </li>
@@ -275,7 +280,7 @@ Nachdem wir die Daten in einen Region-Süd und in eine Region-Nord aufgeteilt ha
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="How-to-use">How to use<a class="anchor-link" href="#How-to-use"> </a></h2>
+<h1 id="How-to-use">How to use<a class="anchor-link" href="#How-to-use"> </a></h1>
 </div>
 </div>
 </div>
