@@ -34,16 +34,16 @@ Für die Umsetzung von Federated Learning verwenden wir XGBoost bzw. LightGBM. B
 
 - berechne den Weighted Quantile Sketch: 
  - Hierzu wird lokal (in unserem Fall) die Distribution von jedem Feature berechnet und an den Parameterserver gesendet. 
- - Dieser wiederum approximiert die globale Distribution von jedem Feature und gibt vor welche Splits geprüft werden müssen. 
+ - Dieser wiederum approximiert die globale Distribution von jedem Feature und gibt, vor welche Splits geprüft werden müssen. 
 - berechnen der Splits: Loakal werden nun die verschiedenen Splits berechnet für die verschiedenen Features. Die Resultate werden an den Parameterserver gesendet
-- globales Modell: Nun wird anahnd der Resultate ein globales Model aufgebaut und an die lokalen Nodes verteilt.
+- globales Modell: Nun wird anhand der Resultate ein globales Model aufgebaut und an die lokalen Nodes verteilt.
 - nun wird mit Schritt 1 wieder begonnen.
 
 ## Machine Learning Problem
-Wie weiter oben beschrieben ist das Ziel die zusätzlich gekauften Produkte im Monat vom 2016-06-28 zu bestimmen. Die Daten beinhalten Montasdaten von 2015-01-28 - 2016-05-28 (ca. 1.5 Jahre). Nun gäbe es mehrere Möglichkeiten das ML Problem zu formulieren: 
+Wie weiter oben beschrieben ist das Ziel die zusätzlich gekauften Produkte im Monat vom 2016-06-28 zu bestimmen. Die Daten beinhalten Monatsdaten von 2015-01-28 - 2016-05-28 (ca. 1.5 Jahre). Nun gäbe es mehrere Möglichkeiten das ML Problem zu formulieren: 
 - wir versuchen immer die gekauften Produkte des nächsten Monats zu bestimmen
 - wir versuchen immer die gekauften Produkte für den Juni jeweils anhand des Vormonats zu bestimmen (ignorieren alle anderen Monate). 
-- wir trainieren ein recommender system (collaborative filtering) mit allen Daten der Produkte und versuchen den letzten Monat vorherzusagen.
+- wir trainieren ein Recommender System mit allen Daten der Produkte und versuchen den letzten Monat vorherzusagen.
 
 # Notebooks
 
@@ -52,10 +52,10 @@ In den Notebooks **01_data_preprocess.ipynb** und **02_data_Cleaning.ipynb** wer
 
 ## Notebook 03_features.ipynb 
 Das Notebook **03_features.ipynb** macht mehrere Dinge. 
- - **Zielvariablen:** Das ML Problem lautet vorherzusagen, welche Produkte von einem Kunden im nächsten Monat zusätzlich erworben werden. Um dies festzustellen muss der aktuelle Monat mit dem Vormonat verglichen werden um zu sehen ob ein neues Produkt erworben wurd.
+ - **Zielvariablen:** Das ML Problem lautet vorherzusagen, welche Produkte von einem Kunden im nächsten Monat zusätzlich erworben werden. Um dies festzustellen muss der aktuelle Monat mit dem Vormonat verglichen werden, um zu sehen ob ein neues Produkt erworben wurd.
  - **Produkt Features:** Neben den vorhandenen Features, macht es natürlich Sinn auch die Produkte selbst als Features zu definieren. Z.B. Kreditkarte Vormonat: hatte der Kunde im Vormonat eine Kreditkarte ist das eine wichtige Info. 
  - **reverse Dummy Variable:** Es ist natürlich möglich, für jedes Produkt einen Boosting Tree zu trainieren. Allerdings ist das nicht effizient. Im Prinzip handelt es sich um eine Classification-Problem. Wir wollen die Top 7 Produkte vorhersagen, wenn wir für jedes Produkt einen Boosting Tree entwerfen fehlt die Vergleichbarkeit und wir können keine Rangordnung festlegen. Darum wurden alle Produkte in einer Zielvariable ```y``` gespeichert. Wenn nun ein Kunde 2 Produkte erworben hat in einem Monat, so hat dieser zwei Zeilen in diesem Monat anstatt vorher eine Zeile.
- - **entfernen der Daten ohne neuem Produkt:** Ziel ist es die Top 7 Produkte vorzuschlagen. Daher macht es aus meiner Sicht keinen Sinn Einträge ohne neuem Produkt zu berücksichtigen zumal unsere Erfolg auch mit APK gemessen wird. 
+ - **entfernen der Daten ohne neuem Produkt:** Ziel ist es die Top 7 Produkte vorzuschlagen. Daher macht es aus meiner Sicht keinen Sinn Einträge, ohne neuen Produkten, zu berücksichtigen zumal unsere Erfolg auch mit APK gemessen wird. 
  - **Train Test Split:**
 Das Ziel dieser Kaggle Challenge ist es die neuen Produkte für die Periode 2016-06-28 vorherzusagen. Dazu haben sie das Datenset in ein Testset (Grunddaten von der Periode 2016-06-28) und Trainingset (Daten von 2015-01-28 bis 2016-05-28) aufgeteilt. Leider kennen wir die wahren Werte von dem Testset der Periode 2016-06-28 nicht, weshalb wir diesen Datenpunkt ignorieren werden und Train und Testset wie folgt aufteilen werden. 
 ![image.png](docs/images/train_test.png)
@@ -68,7 +68,7 @@ In diesem Notebook wird ein Basismodel bestimmt und evaluiert.
 
 - **Evaluierung vom Testset:**
 
- Für die [Evaluierung](https://www.kaggle.com/c/santander-product-recommendation/overview/evaluation) wird der Mean Average Precision @ 7 (MAP@7) hergenommen. Die unten stehenden Formel haben wir uns von [jturkewitz](https://github.com/jturkewitz/SideProjects/blob/4c437b02d5e017636c84cc22eb3ff71f8eea1308/Kaggle/Santander_Prod/santander_prod.py#L272) ausgeliehen. [Hier](http://sdsawtelle.github.io/blog/output/mean-average-precision-MAP-for-recommender-systems.html) noch eine gute Erklärung. 
+ Für die [Evaluierung](https://www.kaggle.com/c/santander-product-recommendation/overview/evaluation) wird der Mean Average Precision @ 7 (MAP@7) hergenommen. Die untenstehenden Formel haben wir uns von [jturkewitz](https://github.com/jturkewitz/SideProjects/blob/4c437b02d5e017636c84cc22eb3ff71f8eea1308/Kaggle/Santander_Prod/santander_prod.py#L272) ausgeliehen. [Hier](http://sdsawtelle.github.io/blog/output/mean-average-precision-MAP-for-recommender-systems.html) noch eine gute Erklärung. 
 
 $$
 MAP@7 =  \dfrac{1} {\vert U \vert} \sum^{\vert U \vert}_{u=1} \dfrac {1} {min(m,7)} \sum^{min(n,7)}_{k=1} P(k)
@@ -77,7 +77,7 @@ $$
 ## Notebook 05_xgboost_simple_ensemble.ipynb
 
 - **Aufteilen der Daten**
-Um die Daten möglichst konsitent zu teilen, werden wir für jede Kundenid den ursprünglichen Wohnort ermitteln. Wenn nun ein Kunde die Region in dem Untersuchungszeitraum wechselt, so wird nur der ursprüngliche Wohnort ausgewertet. So können wir sicherstellen, dass wir keine Daten durch die Aufteilung velieren. In dem Bild weiter unten sind die verschiedenen Regionen zu sehen. Wir werden versuchen Spanien in nördliche und südliche Regionen aufzuteilen.
+Um die Daten möglichst konsistent zu teilen, werden wir für jede Kundenid den ursprünglichen Wohnort ermitteln. Wenn nun ein Kunde die Region in dem Untersuchungszeitraum wechselt, so wird nur der ursprüngliche Wohnort ausgewertet. So können wir sicherstellen, dass wir keine Daten durch die Aufteilung verlieren. In dem Bild weiter unten sind die verschiedenen Regionen zu sehen. Wir werden versuchen Spanien in nördliche und südliche Regionen aufzuteilen.
 ![image.png](data/images/spain.png)
 
 - **Berechnung von einem Ensemble:**
