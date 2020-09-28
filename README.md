@@ -165,3 +165,9 @@ df
  - 
 
 # How to use
+In order to test it do the following:
+1. (optional) I strongly recommend to create an environment with virtualenv or conda 
+2. Clone this repo
+3. run ```python setup.py install``` to install all needed libraries
+4. next you can run the ```jupyter notebook``` and call the displayed URL
+
